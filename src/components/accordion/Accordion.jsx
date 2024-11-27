@@ -1,7 +1,7 @@
-import LocationsTable from "./LocationsTable";
-import PeopleTable from "./PeopleTable";
-import SpeciesTable from "./SpeciesTable";
-import VehiclesTable from "./VehiclesTable";
+import Locations from "../data-components/Locations";
+import People from "../data-components/People";
+import Species from "../data-components/Species";
+import Vehicles from "../data-components/Vehicles";
 
 
 const Accordion = ({id}) => {
@@ -18,7 +18,7 @@ const Accordion = ({id}) => {
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <PeopleTable id={id}/>
+                            <People id={id}/>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ const Accordion = ({id}) => {
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <VehiclesTable id={id}/>
+                            <Vehicles id={id}/>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ const Accordion = ({id}) => {
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <SpeciesTable id={id}/>
+                            <Species id={id}/>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ const Accordion = ({id}) => {
                     </h2>
                     <div id="collapseFor" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <LocationsTable id={id}/>
+                            <Locations id={id}/>
                         </div>
                     </div>
                 </div>

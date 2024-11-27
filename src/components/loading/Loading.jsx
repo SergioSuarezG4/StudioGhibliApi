@@ -1,4 +1,4 @@
-import loading from "../assets/img/studio-ghibli.gif"
+import loading from "../../assets/img/studio-ghibli.gif"
 
 const Loading = () =>{
     return (

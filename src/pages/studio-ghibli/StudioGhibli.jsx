@@ -1,27 +1,16 @@
-import { useEffect, useState } from "react";
-import Film from "./Film";
-import Loading from "./Loading";
+import Film from "../../components/film/Film";
+import Loading from "../../components/loading/Loading";
+import useFetch from "../../hooks/useFetch";
 
 const StudioGhibli = () => {
 
-    const [films, setFilms] = useState([]) 
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        fetch('https://ghibliapi.vercel.app/films')
-        .then(response => response.json())
-        .then(data =>{
-            setFilms(data);
-            setIsLoading(false);
-        });
-
-    }, []);
+    const {data, isLoading} = useFetch({name:'films'})    
 
     return(
         <div className="container">
             <div className="row row-cols-1 row-cols-md-4 g-4">
             {isLoading ? <Loading/> : ''}
-            {!isLoading && films.map(film => (
+            {!isLoading && data.map(film => (
                 <Film
                 key={film.id}
                 id={film.id}

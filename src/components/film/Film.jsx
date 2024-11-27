@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-
 const Film = ({id, image, title, description, director}) => {
     return(
         <div className="col">
@@ -21,5 +20,4 @@ const Film = ({id, image, title, description, director}) => {
         </div>
     )
 }
-
 export default Film;

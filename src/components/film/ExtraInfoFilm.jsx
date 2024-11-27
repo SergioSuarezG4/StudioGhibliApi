@@ -1,4 +1,4 @@
-import Accordion from "./Accordion";
+import Accordion from "../accordion/Accordion";
 
 
 const ExtraInfoFilm = ({id,image,title,release_date,original_title, description,director,producer,rt_score}) => {

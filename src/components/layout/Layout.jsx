@@ -7,12 +7,19 @@ const Layout =() => {
     return (
         <>
             <div>
+              <header>
                 <NavBar></NavBar>
+              </header>
+              <main className="mt-4 mb-4">
+                <Outlet />  
+              </main>
             </div>
-            <div className="mt-4 mb-4">
-                <Outlet></Outlet>
-            </div>
+          
+        
         </>
+
+        
+                
         
     );
 
